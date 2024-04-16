@@ -74,3 +74,28 @@ See the full project repository [here](https://github.com/lealre/etl-airflow?tab
 
 # Excel Schema Validator with Pydantic and Streamlit
 
+Web application that validates a specific Excel schema and stores the data in a PostgreSQL database. The predefined schema is the contract schema, and the application validates it from Excel files using Pydantic, a Python validation library.
+
+<img src="media/excel_validator_project/demo.gif" />
+
+### Tools used
+<div style="display: flex; justify-content: space-between;">
+    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/streamlit/streamlit-original-wordmark.svg" height=100 />   
+    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/sqlalchemy/sqlalchemy-original-wordmark.svg" height=100/>     
+    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/pandas/pandas-original-wordmark.svg" height=100/>
+    <img src="media/pydantic.svg" height=100/>
+    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-plain-wordmark.svg" height=100 />
+    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/githubactions/githubactions-original.svg" height=100/>
+    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/pytest/pytest-plain-wordmark.svg" height=100 />      
+    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-plain-wordmark.svg"  height=100/>          
+</div>
+
+### How it works
+
+The user can upload Excel files in the app, and if the schema differs from the contract, the application will display a message indicating where the data schema differs from the contract schema, highlighting the specific rows and columns where the data does not conform to the agreed-upon schema.
+
+If the schema from the uploaded file passes validation, the app gives the option to store the data in the database
+
+<img src="media/excel_validator_project/app-diagram.png" />
+
+See the full project repository [here](https://github.com/lealre/etl-airflow?tab=readme-ov-file).
