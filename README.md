@@ -1,17 +1,23 @@
 # Hello! I'm Renan
 
-Description Here
+Welcome to my portfolio repository!
 
-<div>
-    <a href = https://www.linkedin.com/in/renanheckert>
-        <img src="media/linkedin.svg" />
-    </a>
-    <a href="mailto:renaanvp@gmail.com">
-        <img src="media/gmail.svg">
-    </a>
-</div>
+Here, I showcase all my public projects. Feel free to explore and get in touch if you have any questions. 
 
-Below you can found all my projects
+You can reach out to me using the links below:
+
+<a href="mailto:renaanvp@gmail.com" target="_blank">
+    <img src="https://img.shields.io/badge/-renaanvp@gmail.com-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Gmail Badge" />
+</a>
+<a href="https://www.linkedin.com/in/renanheckert/" target="_blank">
+    <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="Linkedin Badge" />
+</a>
+
+<!-- <p>
+  <a href="https://github.com/lealre/plant_watering">
+    <img width="50%" align="right" alt="Lealre's github stats" src="https://github-readme-stats.vercel.app/api?username=lealre&show_icons=true&hide_border=true" />
+  </a>
+</p> -->
 
 ### Table of contents
 
