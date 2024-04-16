@@ -28,7 +28,7 @@ After Pydantic validation is completed, SQLAlchemy is used to communicate with P
 
 <img src="media/crud_project/diag.png"/>
 
-
+[Project repository](https://github.com/lealre/crud-rental-properties)
 
 # Orchestrating an ETL with Airflow - From Google Drive to PostgreSQL
 
