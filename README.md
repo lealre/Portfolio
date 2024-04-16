@@ -25,6 +25,8 @@ You can reach out to me using the links below:
 2. [Orchestrating an ETL with Airflow - From Google Drive to PostgreSQL](#orchestrating-an-etl-with-airflow---from-google-drive-to-postgresql)
 3. [Excel Schema Validator with Pydantic and Streamlit](#excel-schema-validator-with-pydantic-and-streamlit)
 
+-------------------------------------------------------------------------------
+
 ## Rental Properties CRUD Catalog with SQLAlchemy, FastAPI, Streamlit and AWS Deploy
 
 A web application for performing CRUD operations (Create, Read, Update and Delete) of rental properties stored in a PostgreSQL database.
