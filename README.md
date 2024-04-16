@@ -1,4 +1,4 @@
-# Hello! I'm Renan
+# Hello! I'm Renan :wave:
 
 Welcome to my portfolio repository!
 
@@ -19,13 +19,13 @@ You can reach out to me using the links below:
   </a>
 </p> -->
 
-### Table of contents
+## Table of contents
 
 1. [Rental Properties CRUD Catalog with SQLAlchemy, FastAPI, Streamlit and AWS Deploy](#rental-properties-crud-catalog-with-sqlalchemy-fastapi-streamlit-and-aws-deploy) 
 2. [Orchestrating an ETL with Airflow - From Google Drive to PostgreSQL](#orchestrating-an-etl-with-airflow---from-google-drive-to-postgresql)
 3. [Excel Schema Validator with Pydantic and Streamlit](#excel-schema-validator-with-pydantic-and-streamlit)
 
-# Rental Properties CRUD Catalog with SQLAlchemy, FastAPI, Streamlit and AWS Deploy
+## Rental Properties CRUD Catalog with SQLAlchemy, FastAPI, Streamlit and AWS Deploy
 
 A web application for performing CRUD operations (Create, Read, Update and Delete) of rental properties stored in a PostgreSQL database.
 
@@ -58,7 +58,7 @@ See the full project repository [here](https://github.com/lealre/crud-rental-pro
 
 ---------------------------------------------------------------------------------------------------
 
-# Orchestrating an ETL with Airflow - From Google Drive to PostgreSQL
+## Orchestrating an ETL with Airflow - From Google Drive to PostgreSQL
 
 An ETL orchestration using Airflow, extracting CSV files from a folder in Google Drive, transforming values, and storing them in a PostgreSQL database.
 
@@ -95,7 +95,7 @@ See the full project repository [here](https://github.com/lealre/etl-airflow?tab
 
 ---------------------------------------------------------------------------------------------------
 
-# Excel Schema Validator with Pydantic and Streamlit
+## Excel Schema Validator with Pydantic and Streamlit
 
 Web application that validates a specific Excel schema and stores the data in a PostgreSQL database. The predefined schema is the contract schema, and the application validates it from Excel files using Pydantic, a Python validation library.
 
