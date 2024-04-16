@@ -33,6 +33,8 @@ After Pydantic validation is completed, SQLAlchemy is used to communicate with P
 
 See the full project repository [here](https://github.com/lealre/crud-rental-properties).
 
+---------------------------------------------------------------------------------------------------
+
 # Orchestrating an ETL with Airflow - From Google Drive to PostgreSQL
 
 An ETL orchestration using Airflow, extracting CSV files from a folder in Google Drive, transforming values, and storing them in a PostgreSQL database.
@@ -66,6 +68,9 @@ Task 03: Transform data and validate it
 
 Task 04: Load data in database
 
+See the full project repository [here](https://github.com/lealre/etl-airflow?tab=readme-ov-file).
+
+---------------------------------------------------------------------------------------------------
 
 # Excel Schema Validator with Pydantic and Streamlit
 
