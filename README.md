@@ -123,6 +123,6 @@ If the schema from the uploaded file passes validation, the app gives the option
 
 <img src="media/excel_validator_project/app-diagram.png" />
 
-See the full project repository [here](https://github.com/lealre/etl-airflow?tab=readme-ov-file).
+See the full project repository [here](https://github.com/lealre/excel-schema-validator).
 
 
