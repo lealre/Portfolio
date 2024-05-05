@@ -23,7 +23,8 @@ You can reach out to me using the links below:
 
 1. [Rental Properties CRUD Catalog with SQLAlchemy, FastAPI, Streamlit and AWS Deploy](#rental-properties-crud-catalog-with-sqlalchemy-fastapi-streamlit-and-aws-deploy) 
 2. [Orchestrating an ETL with Airflow - From Google Drive to PostgreSQL](#orchestrating-an-etl-with-airflow---from-google-drive-to-postgresql)
-3. [Excel Schema Validator with Pydantic and Streamlit](#excel-schema-validator-with-pydantic-and-streamlit)
+3. [Web crawler to extract data from property websites using noSQL databases - Redis and MongoDB](#web-crawler-to-extract-data-from-property-websites-using-nosql-databases---redis-and-mongodb)
+4. [Excel Schema Validator with Pydantic and Streamlit](#excel-schema-validator-with-pydantic-and-streamlit)
 
 -------------------------------------------------------------------------------
 
@@ -94,6 +95,39 @@ Task 03: Transform data and validate it
 Task 04: Load data in database
 
 See the full project repository [here](https://github.com/lealre/etl-airflow?tab=readme-ov-file).
+
+-------------------------------------------------------------------------------
+
+## Web crawler to extract data from property websites using noSQL databases - Redis and MongoDB
+
+A versatile web crawler for extracting data from property websites, utilizing NoSQL databases such as Redis and MongoDB.
+
+The crawler retrieves specific tasks or inputs from Redis, allowing data extraction processes across multiple sites using a single script. In this project two portuguese sites were scraped: [CASASAPO](https://casa.sapo.pt/) and [Imovirtual](https://www.imovirtual.com/).
+
+<img src="media/web_crawler/demo.gif" />
+
+### Tools used
+
+<div style="display: flex; justify-content: space-between;">   
+    <img src="media/requests.svg" height=100/> 
+    <img src="media/bs4.svg" height=100/>
+    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/redis/redis-plain-wordmark.svg"  height=100/>
+    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-plain-wordmark.svg" height=100/>
+</div>
+          
+### How it works
+
+After receiving a specific website key identification, the script retrieves all the inputs from the Redis database in a JSON format. These inputs are responsible for the URL requests and capturing the HTML structure of the target site for extraction. It also receives a query specifying the location in Portugal from which to search for properties.
+
+The extraction process utilizes the BeautifulSoup package, and through a recursive function, it identifies additional pages for extraction if present.
+
+To establish connections with both Redis and MongoDB, the generic crawler inherits from an abstract class.
+
+After extracting all the raw data, it is stored directly in the MongoDB database for further processing and analysis.
+
+<img src="media/web_crawler/diagram.png"/>
+
+See the full project repository [here](https://github.com/lealre/properties-webcrawler?tab=readme-ov-file).
 
 ---------------------------------------------------------------------------------------------------
 
