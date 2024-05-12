@@ -21,10 +21,15 @@ You can reach out to me using the links below:
 
 ## Table of contents
 
+### Python
+
 1. [Rental Properties CRUD Catalog with SQLAlchemy, FastAPI, Streamlit and AWS Deploy](#rental-properties-crud-catalog-with-sqlalchemy-fastapi-streamlit-and-aws-deploy) 
 2. [Orchestrating an ETL with Airflow - From Google Drive to PostgreSQL](#orchestrating-an-etl-with-airflow---from-google-drive-to-postgresql)
 3. [Web crawler to extract data from property websites using noSQL databases - Redis and MongoDB](#web-crawler-to-extract-data-from-property-websites-using-nosql-databases---redis-and-mongodb)
 4. [Excel Schema Validator with Pydantic and Streamlit](#excel-schema-validator-with-pydantic-and-streamlit)
+
+## SQL
+1. [Analytic Report with SQL - Northwind database](#analytic-report-with-sql---northwind-database)
 
 -------------------------------------------------------------------------------
 
@@ -159,4 +164,17 @@ If the schema from the uploaded file passes validation, the app gives the option
 
 See the full project repository [here](https://github.com/lealre/excel-schema-validator).
 
+---------------------------------------------------------------------------------------------------
 
+## Analytic Report with SQL - Northwind database
+
+This project aims to generate an analytical business report from a database that contains sales data from a company called Northwind Traders, which imports and exports specialty foods from around the world. 
+
+It focus primarily on extracting insights from revenue, product, and customer data using SQL operations in a PostgreSQL database.
+
+<img src="media/northwind_sql/demo.gif" />
+
+
+It is possible to run this project using only Docker, as it builds both the PostgreSQL database and the client pgAdmin. All instructions are provided in How to run this project section.
+
+See the full project repository [here](https://github.com/lealre/northwind-analytics-sql).
