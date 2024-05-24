@@ -178,3 +178,17 @@ It focus primarily on extracting insights from revenue, product, and customer da
 It is possible to run this project using only Docker, as it builds both the PostgreSQL database and the client pgAdmin. All instructions are provided in How to run this project section.
 
 See the full project repository [here](https://github.com/lealre/northwind-analytics-sql).
+
+---------------------------------------------------------------------------------------------------
+
+## Automating Northwind database operations using PL/pgSQL - Stored Procedures and Triggers
+
+This project aims to use stored procedures and triggers in SQL to automate operations in a database.
+
+By using the PL/pgSQL language on a PostgreSQL database server, two automations were implemented: the first to automatically register changes in an employee's title in a secondary table for future audits; the second to check if there is sufficient stock to fulfill a new order when it is added, as well as updating the stock quantity after the order is stored.
+
+<img src="media/northwind_plpgsql/demo.gif" />
+
+It is possible to run this project using only Docker, as it builds both the PostgreSQL database and the client pgAdmin. All instructions are provided in How to run this project section.
+
+See the full project repository [here](https://github.com/lealre/northwind-PLpgSQL).
