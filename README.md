@@ -30,6 +30,7 @@ You can reach out to me using the links below:
 
 ## SQL
 1. [Analytic Report with SQL - Northwind database](#analytic-report-with-sql---northwind-database)
+2. [Automating Northwind database operations using PL/pgSQL - Stored Procedures and Triggers](#automating-northwind-database-operations-using-plpgsql---stored-procedures-and-triggers)
 
 -------------------------------------------------------------------------------
 
