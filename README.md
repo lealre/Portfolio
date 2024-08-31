@@ -25,8 +25,9 @@ You can reach out to me using the links below:
 
 1. [Rental Properties CRUD Catalog with SQLAlchemy, FastAPI, Streamlit and AWS Deploy](#rental-properties-crud-catalog-with-sqlalchemy-fastapi-streamlit-and-aws-deploy) 
 2. [Orchestrating an ETL with Airflow - From Google Drive to PostgreSQL](#orchestrating-an-etl-with-airflow---from-google-drive-to-postgresql)
-3. [Web crawler to extract data from property websites using noSQL databases - Redis and MongoDB](#web-crawler-to-extract-data-from-property-websites-using-nosql-databases---redis-and-mongodb)
-4. [Excel Schema Validator with Pydantic and Streamlit](#excel-schema-validator-with-pydantic-and-streamlit)
+3. [Backend API for a digital book collection with JWT authentication using FastAPI](#backend-api-for-a-digital-book-collection-with-jwt-authentication-using-fastapi) 
+4. [Web crawler to extract data from property websites using noSQL databases - Redis and MongoDB](#web-crawler-to-extract-data-from-property-websites-using-nosql-databases---redis-and-mongodb)
+5. [Excel Schema Validator with Pydantic and Streamlit](#excel-schema-validator-with-pydantic-and-streamlit)
 
 ## SQL
 1. [Analytic Report with SQL - Northwind database](#analytic-report-with-sql---northwind-database)
@@ -103,6 +104,49 @@ Task 03: Transform data and validate it
 Task 04: Load data in database
 
 See the full project repository [here](https://github.com/lealre/etl-airflow?tab=readme-ov-file).
+
+-------------------------------------------------------------------------------
+
+## Backend API for a digital book collection with JWT authentication using FastAPI
+
+This project consists of a backend API developed using [FastAPI](https://fastapi.tiangolo.com/) for a simplified version of a digital book collection.
+
+<img src = 'media/madr/madr.gif' />
+
+It's called MADR (Mader), a Portuguese acronym for "Meu Acervo Digital de Romances" (My Digital Collection of Romances), and it allows user registration and all CRUD operations for both authors and books.
+
+It is built using the FastAPI framework, with [Pydantic](https://docs.pydantic.dev/latest/) responsible for data validation. It uses a PostgreSQL database, and [SQLAlchemy](https://www.sqlalchemy.org/) is used for ORM, with [Alembic](https://alembic.sqlalchemy.org/en/latest/) handling database migrations during the development process.
+
+JWT (JSON Web Token) is used as a Bearer token for authorization and authentication in API operations, such as creating, updating, and deleting records. The JWT is included in the Authorization header of HTTP requests as a Bearer token.
+
+The tests have 100% coverage in the `src` folder using [pytest](https://docs.pytest.org/en/stable/) and [pytest-cov](https://pytest-cov.readthedocs.io/en/latest/). It also uses [factory-boy](https://factoryboy.readthedocs.io/en/stable/) to handle massive creation of models, [freezegun](https://github.com/spulec/freezegun) to test token expiration, and [testcontainers](https://testcontainers.com/guides/getting-started-with-testcontainers-for-python/) to build a PostgreSQL instance during tests.
+
+It is possible to run it locally using Docker Compose, which creates all the tables in PostgreSQL. A CI routine was also implemented using GitHub Actions.
+
+### Tools used
+<div style="display: flex; justify-content: space-between;">
+    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/fastapi/fastapi-original-wordmark.svg" height=100>
+    <img src="media/pydantic.svg" height=100/>
+    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/sqlalchemy/sqlalchemy-original-wordmark.svg" height=100/> 
+    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-plain-wordmark.svg" height=100 />
+    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/githubactions/githubactions-original.svg" height=100/>
+    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/pytest/pytest-plain-wordmark.svg" height=100 /> 
+    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-plain-wordmark.svg"  height=100/>      
+          
+</div>
+
+### How it works
+The API has 4 main routes:
+
+The `/auth` route is used for user login and generates the access token responsible for authorizing and authenticating some of the CRUD operations. It is also possible to refresh the token, which is set to last 60 minutes by default.
+
+The `/user` route is used to create a user and manage the account. 
+
+The `/book` route is responsible for the CRUD operations related to books.
+
+The `/author` route is responsible for the CRUD operations related to authors.
+
+See the full project repository [here](https://github.com/lealre/madr-fastapi).
 
 -------------------------------------------------------------------------------
 
