@@ -23,87 +23,15 @@ You can reach out to me using the links below:
 
 ### Python
 
-1. [Rental Properties CRUD Catalog with SQLAlchemy, FastAPI, Streamlit and AWS Deploy](#rental-properties-crud-catalog-with-sqlalchemy-fastapi-streamlit-and-aws-deploy) 
+1. [Backend API for a digital book collection with JWT authentication using FastAPI](#backend-api-for-a-digital-book-collection-with-jwt-authentication-using-fastapi) 
 2. [Orchestrating an ETL with Airflow - From Google Drive to PostgreSQL](#orchestrating-an-etl-with-airflow---from-google-drive-to-postgresql)
-3. [Backend API for a digital book collection with JWT authentication using FastAPI](#backend-api-for-a-digital-book-collection-with-jwt-authentication-using-fastapi) 
-4. [Web crawler to extract data from property websites using noSQL databases - Redis and MongoDB](#web-crawler-to-extract-data-from-property-websites-using-nosql-databases---redis-and-mongodb)
+3. [Rental Properties CRUD Catalog with SQLAlchemy, FastAPI, Streamlit and AWS Deploy](#rental-properties-crud-catalog-with-sqlalchemy-fastapi-streamlit-and-aws-deploy) 
+4. [Property Sales Dashboard Using Real Data Crawled from Real Estate Website - Httpx, MongoDB and Dash-plotly](#property-sales-dashboard-using-real-data-crawled-from-real-estate-website---httpx-mongodb-and-dash-plotly)
 5. [Excel Schema Validator with Pydantic and Streamlit](#excel-schema-validator-with-pydantic-and-streamlit)
 
 ## SQL
 1. [Analytic Report with SQL - Northwind database](#analytic-report-with-sql---northwind-database)
 2. [Automating Northwind database operations using PL/pgSQL - Stored Procedures and Triggers](#automating-northwind-database-operations-using-plpgsql---stored-procedures-and-triggers)
-
--------------------------------------------------------------------------------
-
-## Rental Properties CRUD Catalog with SQLAlchemy, FastAPI, Streamlit and AWS Deploy
-
-Web application for performing asynchronous CRUD operations on a PostgreSQL database using FastAPI, SQLAlchemy, Pydantic, Streamlit, and Docker.
-
-<img src="media/crud_project/demo.gif" />
-
-### Tools used
-
-<div style="display: flex; justify-content: space-between;">
-    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/streamlit/streamlit-original-wordmark.svg" height=100 />          
-    <img src="media/pydantic.svg" height=100/>
-    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/sqlalchemy/sqlalchemy-original-wordmark.svg" height=100/>     
-    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/pandas/pandas-original-wordmark.svg" height=100/>
-    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/fastapi/fastapi-original-wordmark.svg" height=100>
-    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-plain-wordmark.svg" height=100 />
-    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-plain-wordmark.svg"  height=100/>      
-    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" height=100/>
-</div>
-          
-### How it works
-
-The project was built in a way where three services communicate with each other separately: database, backend, and frontend. Docker Compose was used to orchestrate the containers, allowing the frontend to communicate with the backend through the API once each one is running in independent containers.
-
-In each of these operations, the frontend sends a request to the API created using FastAPI. The API is responsible for communicating with the backend and sending a response back to the frontend to display the result of the CRUD operation. In the first layer, Pydantic is used to validate all the inputs, ensuring that the schema the user is trying to send matches the database table schema. If it doesn't match, an error message is displayed to the user.
-
-After [Pydantic](https://docs.pydantic.dev/latest/) validation is completed, [SQLAlchemy](https://www.sqlalchemy.org/) is used to communicate with PostgreSQL and perform one of the CRUD operations in the database.
-
-[Alembic](https://alembic.sqlalchemy.org/en/latest/) was also used to perform database migrations, and [Pytest](https://docs.pytest.org/en/stable/) was used to perform some basic tests on asynchronous backend routes.
-
-<img src="media/crud_project/diag.png"/>
-
-See the full project repository [here](https://github.com/lealre/crud-rental-properties).
-
----------------------------------------------------------------------------------------------------
-
-## Orchestrating an ETL with Airflow - From Google Drive to PostgreSQL
-
-An ETL orchestration using Airflow, extracting CSV files from a folder in Google Drive, transforming values, and storing them in a PostgreSQL database.
-
-<img src="media/airflow_project/etl-diagram.png"/>
-
-The data is handled in a pandas DataFrame format, and all the data validation is performed using the Pandera library, a Pydantic-based library to validate DataFrame schemas. By setting a specific data contract, validations occur in two phases: when extracted and when transformed.
-
-The Airflow implementation was created using the Astro CLI, the command line interface for data orchestration from Astronomer.
-
-### Tools used
-<div style="display: flex; justify-content: space-between;">
-    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/sqlalchemy/sqlalchemy-original-wordmark.svg" height=100/>     
-    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/pandas/pandas-original-wordmark.svg" height=100/>
-    <img src="media/pandera.svg" height=40/>
-    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-plain-wordmark.svg" height=100 />
-    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/githubactions/githubactions-original.svg" height=100/>
-    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/pytest/pytest-plain-wordmark.svg" height=100 />      
-    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/apacheairflow/apacheairflow-original-wordmark.svg" height=150/>
-    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-plain-wordmark.svg"  height=100/>      
-          
-</div>
-
-### How it works
-
-Task 01: Connect with Google Drive API and extract CSV files
-
-Task 02: Validate extracted data
-
-Task 03: Transform data and validate it
-
-Task 04: Load data in database
-
-See the full project repository [here](https://github.com/lealre/etl-airflow?tab=readme-ov-file).
 
 -------------------------------------------------------------------------------
 
@@ -148,13 +76,84 @@ The `/author` route is responsible for the CRUD operations related to authors.
 
 See the full project repository [here](https://github.com/lealre/madr-fastapi).
 
+---------------------------------------------------------------------------------------------------
+
+## Orchestrating an ETL with Airflow - From Google Drive to PostgreSQL
+
+An ETL orchestration using Airflow, extracting CSV files from a folder in Google Drive, transforming values, and storing them in a PostgreSQL database.
+
+<img src="media/airflow_project/etl-diagram.png"/>
+
+The data is handled in a pandas DataFrame format, and all the data validation is performed using the Pandera library, a Pydantic-based library to validate DataFrame schemas. By setting a specific data contract, validations occur in two phases: when extracted and when transformed.
+
+The Airflow implementation was created using the Astro CLI, the command line interface for data orchestration from Astronomer.
+
+### Tools used
+<div style="display: flex; justify-content: space-between;">
+    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/sqlalchemy/sqlalchemy-original-wordmark.svg" height=100/>     
+    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/pandas/pandas-original-wordmark.svg" height=100/>
+    <img src="media/pandera.svg" height=40/>
+    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-plain-wordmark.svg" height=100 />
+    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/githubactions/githubactions-original.svg" height=100/>
+    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/pytest/pytest-plain-wordmark.svg" height=100 />      
+    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/apacheairflow/apacheairflow-original-wordmark.svg" height=150/>
+    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-plain-wordmark.svg"  height=100/>      
+          
+</div>
+
+### How it works
+
+Task 01: Connect with Google Drive API and extract CSV files
+
+Task 02: Validate extracted data
+
+Task 03: Transform data and validate it
+
+Task 04: Load data in database
+
+See the full project repository [here](https://github.com/lealre/etl-airflow?tab=readme-ov-file).
+
+-------------------------------------------------------------------------------
+## Rental Properties CRUD Catalog with SQLAlchemy, FastAPI, Streamlit and AWS Deploy
+
+Web application for performing asynchronous CRUD operations on a PostgreSQL database using FastAPI, SQLAlchemy, Pydantic, Streamlit, and Docker.
+
+<img src="media/crud_project/demo.gif" />
+
+### Tools used
+
+<div style="display: flex; justify-content: space-between;">
+    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/streamlit/streamlit-original-wordmark.svg" height=100 />          
+    <img src="media/pydantic.svg" height=100/>
+    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/sqlalchemy/sqlalchemy-original-wordmark.svg" height=100/>     
+    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/pandas/pandas-original-wordmark.svg" height=100/>
+    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/fastapi/fastapi-original-wordmark.svg" height=100>
+    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-plain-wordmark.svg" height=100 />
+    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-plain-wordmark.svg"  height=100/>      
+    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" height=100/>
+</div>
+          
+### How it works
+
+The project was built in a way where three services communicate with each other separately: database, backend, and frontend. Docker Compose was used to orchestrate the containers, allowing the frontend to communicate with the backend through the API once each one is running in independent containers.
+
+In each of these operations, the frontend sends a request to the API created using FastAPI. The API is responsible for communicating with the backend and sending a response back to the frontend to display the result of the CRUD operation. In the first layer, Pydantic is used to validate all the inputs, ensuring that the schema the user is trying to send matches the database table schema. If it doesn't match, an error message is displayed to the user.
+
+After [Pydantic](https://docs.pydantic.dev/latest/) validation is completed, [SQLAlchemy](https://www.sqlalchemy.org/) is used to communicate with PostgreSQL and perform one of the CRUD operations in the database.
+
+[Alembic](https://alembic.sqlalchemy.org/en/latest/) was also used to perform database migrations, and [Pytest](https://docs.pytest.org/en/stable/) was used to perform some basic tests on asynchronous backend routes.
+
+<img src="media/crud_project/diag.png"/>
+
+See the full project repository [here](https://github.com/lealre/crud-rental-properties).
+
 -------------------------------------------------------------------------------
 
-## Web crawler to extract data from property websites using noSQL databases - Redis and MongoDB
+## Property Sales Dashboard Using Real Data Crawled from Real Estate Website - Httpx, MongoDB and Dash-plotly
 
-A versatile web crawler for extracting data from property websites, utilizing NoSQL databases such as Redis and MongoDB.
+This repository consists of an implementation of a dashboard containing data scraped from a real estate website: [Imovirtual](https://www.imovirtual.com/), a Portuguese real estate website offering homes, apartments, and other properties for sale and rent. 
 
-The crawler retrieves specific tasks or inputs from Redis, allowing data extraction processes across multiple sites using a single script. In this project two portuguese sites were scraped: [CASASAPO](https://casa.sapo.pt/) and [Imovirtual](https://www.imovirtual.com/).
+Using MongoDB as the database, it crawls raw data, cleans it, and makes it ready to be used in the dashboard.
 
 <img src="media/web_crawler/demo.gif" />
 
@@ -163,23 +162,32 @@ The crawler retrieves specific tasks or inputs from Redis, allowing data extract
 <div style="display: flex; justify-content: space-between;">   
     <img src="media/requests.svg" height=100/> 
     <img src="media/bs4.svg" height=100/>
-    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/redis/redis-plain-wordmark.svg"  height=100/>
+    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-plain-wordmark.svg"  height=100/>
+    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/plotly/plotly-original-wordmark.svg" height=100/>
     <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-plain-wordmark.svg" height=100/>
 </div>
           
 ### How it works
 
-After receiving a specific website key identification, the script retrieves all the inputs from the Redis database in a JSON format. These inputs are responsible for the URL requests and capturing the HTML structure of the target site for extraction. It also receives a query specifying the location in Portugal from which to search for properties.
+The project is divided into two blocks that can work separately:
 
-The extraction process utilizes the BeautifulSoup package, and through a recursive function, it identifies additional pages for extraction if present.
+- **Data Ingestion** 
 
-To establish connections with both Redis and MongoDB, the generic crawler inherits from an abstract class.
+Responsible for crawling the data, consolidating it in the database while avoiding duplicates, and preparing the data for use in the dashboard. 
 
-After extracting all the raw data, it is stored directly in the MongoDB database for further processing and analysis.
+The raw collection, which comes from the crawler, can store data in MongoDB, an AWS S3 bucket as a JSON file, or locally as a JSON file, depending on the settings in the .env file.
+
+For the data used in the dashboard, a new collection is created. This pipeline extracts data from one of the previous collections (raw or consolidated), filters and transforms it so that it is ready for use in the dashboard.
+
+For this specific website, it was possible to use asynchronous requests.
+
+- **Dashboard**
+
+Uses the cleaned and filtered data from the database.
 
 <img src="media/web_crawler/diagram.png"/>
 
-See the full project repository [here](https://github.com/lealre/properties-webcrawler?tab=readme-ov-file).
+See the full project repository [here](https://github.com/lealre/crawler-to-dash).
 
 ---------------------------------------------------------------------------------------------------
 
