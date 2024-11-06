@@ -23,11 +23,13 @@ You can reach out to me using the links below:
 
 ### Python
 
-1. [Backend API for a digital book collection with JWT authentication using FastAPI](#backend-api-for-a-digital-book-collection-with-jwt-authentication-using-fastapi) 
-2. [Orchestrating an ETL with Airflow - From Google Drive to PostgreSQL](#orchestrating-an-etl-with-airflow---from-google-drive-to-postgresql)
-3. [Rental Properties CRUD Catalog with SQLAlchemy, FastAPI, Streamlit and AWS Deploy](#rental-properties-crud-catalog-with-sqlalchemy-fastapi-streamlit-and-aws-deploy) 
-4. [Property Sales Dashboard Using Real Data Crawled from Real Estate Website - Httpx, MongoDB and Dash-plotly](#property-sales-dashboard-using-real-data-crawled-from-real-estate-website---httpx-mongodb-and-dash-plotly)
-5. [Excel Schema Validator with Pydantic and Streamlit](#excel-schema-validator-with-pydantic-and-streamlit)
+1. [Backend API for a digital book collection with JWT authentication using FastAPI](#backend-api-for-a-digital-book-collection-with-jwt-authentication-using-fastapi)
+2. [A basic to-do app built with the Django framework](#a-basic-to-do-app-built-with-the-django-framework)
+3. [Orchestrating an ETL with Airflow - From Google Drive to PostgreSQL](#orchestrating-an-etl-with-airflow---from-google-drive-to-postgresql)
+4. [Rental Properties CRUD Catalog with SQLAlchemy, FastAPI, Streamlit and AWS Deploy](#rental-properties-crud-catalog-with-sqlalchemy-fastapi-streamlit-and-aws-deploy)
+5. [Property Sales Dashboard Using Real Data Crawled from Real Estate Website - Httpx, MongoDB and Dash-plotly](#property-sales-dashboard-using-real-data-crawled-from-real-estate-website---httpx-mongodb-and-dash-plotly)
+6. [Excel Schema Validator with Pydantic and Streamlit](#excel-schema-validator-with-pydantic-and-streamlit)
+
 
 ## SQL
 1. [Analytic Report with SQL - Northwind database](#analytic-report-with-sql---northwind-database)
@@ -73,6 +75,36 @@ The `/user` route is used to create a user and manage the account.
 The `/book` route is responsible for the CRUD operations related to books.
 
 The `/author` route is responsible for the CRUD operations related to authors.
+
+See the full project repository [here](https://github.com/lealre/madr-fastapi).
+
+---------------------------------------------------------------------------------------------------
+
+## A basic to-do app built with the Django framework.
+
+A basic to-do app built with the Django framework. It features a simple interface to add, edit, and delete to-dos. In the trash area, you can either restore a to-do or permanently delete it.
+
+Below is a quick demonstration of the app in action.
+
+<img src = 'media/django_todo/demo.gif' />
+
+It uses function-based views and includes some JavaScript to enable frontend interactions.
+
+Although it does not test every aspect of the application, it achieves 100% coverage using [pytest-cov](https://pytest-cov.readthedocs.io/en/latest/). The tests also utilize [pytest](https://docs.pytest.org/en/stable/).
+
+It’s possible to run this app using Docker Compose, which automatically creates a superuser and uses a local PostgreSQL database. The PostgreSQL database is also set up within Docker Compose.
+
+
+### Tools used
+<div style="display: flex; justify-content: space-between;">
+    <img src="media/django.svg" height=100>
+    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-plain-wordmark.svg" height=100 />
+    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/pytest/pytest-plain-wordmark.svg" height=100 /> 
+    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-plain-wordmark.svg"  height=100/>      
+          
+</div>
+
+<br></br>
 
 See the full project repository [here](https://github.com/lealre/madr-fastapi).
 
@@ -185,7 +217,7 @@ For this specific website, it was possible to use asynchronous requests.
 
 Uses the cleaned and filtered data from the database.
 
-<img src="media/web_crawler/diagram.png"/>
+<img src="media/web_crawler/diagram.png" style="width: 100%;"/>
 
 See the full project repository [here](https://github.com/lealre/crawler-to-dash).
 
