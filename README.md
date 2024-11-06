@@ -2,7 +2,7 @@
 
 Welcome to my portfolio repository!
 
-Here, I showcase all my public projects. Feel free to explore and get in touch if you have any questions. 
+Here, I showcase all my public projects. Feel free to explore and get in touch if you have any questions.
 
 You can reach out to me using the links below:
 
@@ -12,12 +12,6 @@ You can reach out to me using the links below:
 <a href="https://www.linkedin.com/in/renanheckert/" target="_blank">
     <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="Linkedin Badge" />
 </a>
-
-<!-- <p>
-  <a href="https://github.com/lealre/plant_watering">
-    <img width="50%" align="right" alt="Lealre's github stats" src="https://github-readme-stats.vercel.app/api?username=lealre&show_icons=true&hide_border=true" />
-  </a>
-</p> -->
 
 ## Table of contents
 
@@ -30,12 +24,12 @@ You can reach out to me using the links below:
 5. [Property Sales Dashboard Using Real Data Crawled from Real Estate Website - Httpx, MongoDB and Dash-plotly](#property-sales-dashboard-using-real-data-crawled-from-real-estate-website---httpx-mongodb-and-dash-plotly)
 6. [Excel Schema Validator with Pydantic and Streamlit](#excel-schema-validator-with-pydantic-and-streamlit)
 
-
 ## SQL
+
 1. [Analytic Report with SQL - Northwind database](#analytic-report-with-sql---northwind-database)
 2. [Automating Northwind database operations using PL/pgSQL - Stored Procedures and Triggers](#automating-northwind-database-operations-using-plpgsql---stored-procedures-and-triggers)
 
--------------------------------------------------------------------------------
+---
 
 ## Backend API for a digital book collection with JWT authentication using FastAPI
 
@@ -54,7 +48,8 @@ The tests have 100% coverage in the `src` folder using [pytest](https://docs.pyt
 It is possible to run it locally using Docker Compose, which creates all the tables in PostgreSQL. A CI routine was also implemented using GitHub Actions.
 
 ### Tools used
-<div style="display: flex; justify-content: space-between;">
+
+<div style="display: flex; gap: 40px;">
     <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/fastapi/fastapi-original-wordmark.svg" height=100>
     <img src="media/pydantic.svg" height=100/>
     <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/sqlalchemy/sqlalchemy-original-wordmark.svg" height=100/> 
@@ -66,11 +61,12 @@ It is possible to run it locally using Docker Compose, which creates all the tab
 </div>
 
 ### How it works
+
 The API has 4 main routes:
 
 The `/auth` route is used for user login and generates the access token responsible for authorizing and authenticating some of the CRUD operations. It is also possible to refresh the token, which is set to last 60 minutes by default.
 
-The `/user` route is used to create a user and manage the account. 
+The `/user` route is used to create a user and manage the account.
 
 The `/book` route is responsible for the CRUD operations related to books.
 
@@ -78,7 +74,7 @@ The `/author` route is responsible for the CRUD operations related to authors.
 
 See the full project repository [here](https://github.com/lealre/madr-fastapi).
 
----------------------------------------------------------------------------------------------------
+---
 
 ## A basic to-do app built with the Django framework.
 
@@ -94,21 +90,23 @@ Although it does not test every aspect of the application, it achieves 100% cove
 
 It’s possible to run this app using Docker Compose, which automatically creates a superuser and uses a local PostgreSQL database. The PostgreSQL database is also set up within Docker Compose.
 
-
 ### Tools used
-<div style="display: flex; justify-content: space-between;">
+
+<div style="display: flex; gap: 40px;">
     <img src="media/django.svg" height=100>
+    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-plain-wordmark.svg" height=100/>
+    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-plain-wordmark.svg" height=100/>
+    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" height=100/>
     <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-plain-wordmark.svg" height=100 />
     <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/pytest/pytest-plain-wordmark.svg" height=100 /> 
-    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-plain-wordmark.svg"  height=100/>      
-          
+    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-plain-wordmark.svg"  height=100/>            
 </div>
 
 <br></br>
 
-See the full project repository [here](https://github.com/lealre/madr-fastapi).
+See the full project repository [here](https://github.com/lealre/todo-django).
 
----------------------------------------------------------------------------------------------------
+---
 
 ## Orchestrating an ETL with Airflow - From Google Drive to PostgreSQL
 
@@ -121,7 +119,8 @@ The data is handled in a pandas DataFrame format, and all the data validation is
 The Airflow implementation was created using the Astro CLI, the command line interface for data orchestration from Astronomer.
 
 ### Tools used
-<div style="display: flex; justify-content: space-between;">
+
+<div style="display: flex; gap: 40px;">
     <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/sqlalchemy/sqlalchemy-original-wordmark.svg" height=100/>     
     <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/pandas/pandas-original-wordmark.svg" height=100/>
     <img src="media/pandera.svg" height=40/>
@@ -145,7 +144,8 @@ Task 04: Load data in database
 
 See the full project repository [here](https://github.com/lealre/etl-airflow?tab=readme-ov-file).
 
--------------------------------------------------------------------------------
+---
+
 ## Rental Properties CRUD Catalog with SQLAlchemy, FastAPI, Streamlit and AWS Deploy
 
 Web application for performing asynchronous CRUD operations on a PostgreSQL database using FastAPI, SQLAlchemy, Pydantic, Streamlit, and Docker.
@@ -154,7 +154,7 @@ Web application for performing asynchronous CRUD operations on a PostgreSQL data
 
 ### Tools used
 
-<div style="display: flex; justify-content: space-between;">
+<div style="display: flex; gap: 40px;">
     <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/streamlit/streamlit-original-wordmark.svg" height=100 />          
     <img src="media/pydantic.svg" height=100/>
     <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/sqlalchemy/sqlalchemy-original-wordmark.svg" height=100/>     
@@ -179,11 +179,11 @@ After [Pydantic](https://docs.pydantic.dev/latest/) validation is completed, [SQ
 
 See the full project repository [here](https://github.com/lealre/crud-rental-properties).
 
--------------------------------------------------------------------------------
+---
 
 ## Property Sales Dashboard Using Real Data Crawled from Real Estate Website - Httpx, MongoDB and Dash-plotly
 
-This repository consists of an implementation of a dashboard containing data scraped from a real estate website: [Imovirtual](https://www.imovirtual.com/), a Portuguese real estate website offering homes, apartments, and other properties for sale and rent. 
+This repository consists of an implementation of a dashboard containing data scraped from a real estate website: [Imovirtual](https://www.imovirtual.com/), a Portuguese real estate website offering homes, apartments, and other properties for sale and rent.
 
 Using MongoDB as the database, it crawls raw data, cleans it, and makes it ready to be used in the dashboard.
 
@@ -191,7 +191,7 @@ Using MongoDB as the database, it crawls raw data, cleans it, and makes it ready
 
 ### Tools used
 
-<div style="display: flex; justify-content: space-between;">   
+<div style="display: flex; gap: 40px;">   
     <img src="media/requests.svg" height=100/> 
     <img src="media/bs4.svg" height=100/>
     <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-plain-wordmark.svg"  height=100/>
@@ -203,9 +203,9 @@ Using MongoDB as the database, it crawls raw data, cleans it, and makes it ready
 
 The project is divided into two blocks that can work separately:
 
-- **Data Ingestion** 
+- **Data Ingestion**
 
-Responsible for crawling the data, consolidating it in the database while avoiding duplicates, and preparing the data for use in the dashboard. 
+Responsible for crawling the data, consolidating it in the database while avoiding duplicates, and preparing the data for use in the dashboard.
 
 The raw collection, which comes from the crawler, can store data in MongoDB, an AWS S3 bucket as a JSON file, or locally as a JSON file, depending on the settings in the .env file.
 
@@ -221,7 +221,7 @@ Uses the cleaned and filtered data from the database.
 
 See the full project repository [here](https://github.com/lealre/crawler-to-dash).
 
----------------------------------------------------------------------------------------------------
+---
 
 ## Excel Schema Validator with Pydantic and Streamlit
 
@@ -230,7 +230,8 @@ Web application that validates a specific Excel schema and stores the data in a 
 <img src="media/excel_validator_project/demo.gif" />
 
 ### Tools used
-<div style="display: flex; justify-content: space-between;">
+
+<div style="display: flex; gap: 40px;">
     <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/streamlit/streamlit-original-wordmark.svg" height=100 />   
     <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/sqlalchemy/sqlalchemy-original-wordmark.svg" height=100/>     
     <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/pandas/pandas-original-wordmark.svg" height=100/>
@@ -251,22 +252,21 @@ If the schema from the uploaded file passes validation, the app gives the option
 
 See the full project repository [here](https://github.com/lealre/excel-schema-validator).
 
----------------------------------------------------------------------------------------------------
+---
 
 ## Analytic Report with SQL - Northwind database
 
-This project aims to generate an analytical business report from a database that contains sales data from a company called Northwind Traders, which imports and exports specialty foods from around the world. 
+This project aims to generate an analytical business report from a database that contains sales data from a company called Northwind Traders, which imports and exports specialty foods from around the world.
 
 It focus primarily on extracting insights from revenue, product, and customer data using SQL operations in a PostgreSQL database.
 
 <img src="media/northwind_sql/demo.gif" />
 
-
 It is possible to run this project using only Docker, as it builds both the PostgreSQL database and the client pgAdmin. All instructions are provided in How to run this project section.
 
 See the full project repository [here](https://github.com/lealre/northwind-analytics-sql).
 
----------------------------------------------------------------------------------------------------
+---
 
 ## Automating Northwind database operations using PL/pgSQL - Stored Procedures and Triggers
 
