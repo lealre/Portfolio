@@ -15,23 +15,71 @@ You can reach out to me using the links below:
 
 ## Table of contents
 
-### Python
-
-1. [Backend API for a digital book collection with JWT authentication using FastAPI](#backend-api-for-a-digital-book-collection-with-jwt-authentication-using-fastapi)
-2. [A basic to-do app built with the Django framework](#a-basic-to-do-app-built-with-the-django-framework)
-3. [Orchestrating an ETL with Airflow - From Google Drive to PostgreSQL](#orchestrating-an-etl-with-airflow---from-google-drive-to-postgresql)
-4. [Rental Properties CRUD Catalog with SQLAlchemy, FastAPI, Streamlit and AWS Deploy](#rental-properties-crud-catalog-with-sqlalchemy-fastapi-streamlit-and-aws-deploy)
-5. [Property Sales Dashboard Using Real Data Crawled from Real Estate Website - Httpx, MongoDB and Dash-plotly](#property-sales-dashboard-using-real-data-crawled-from-real-estate-website---httpx-mongodb-and-dash-plotly)
-6. [Excel Schema Validator with Pydantic and Streamlit](#excel-schema-validator-with-pydantic-and-streamlit)
-
-## SQL
-
-1. [Analytic Report with SQL - Northwind database](#analytic-report-with-sql---northwind-database)
-2. [Automating Northwind database operations using PL/pgSQL - Stored Procedures and Triggers](#automating-northwind-database-operations-using-plpgsql---stored-procedures-and-triggers)
+- [Web App for a Digital Book Collection Using FastAPI for Backend and React for Frontend](#web-app-for-a-digital-book-collection-using-fastapi-for-backend-and-react-for-frontend)
+- [Backend API for a Digital Book Collection with JWT Authentication Using FastAPI](#backend-api-for-a-digital-book-collection-with-jwt-authentication-using-fastapi)
+- [A Basic To-Do App Built with the Django Framework](#a-basic-to-do-app-built-with-the-django-framework)
+- [Orchestrating an ETL with Airflow - From Google Drive to PostgreSQL](#orchestrating-an-etl-with-airflow---from-google-drive-to-postgresql)
+- [Rental Properties CRUD Catalog with SQLAlchemy, FastAPI, Streamlit, and AWS Deploy](#rental-properties-crud-catalog-with-sqlalchemy-fastapi-streamlit-and-aws-deploy)
+- [Property Sales Dashboard Using Real Data Crawled from Real Estate Website - HTTPX, MongoDB, and Dash-Plotly](#property-sales-dashboard-using-real-data-crawled-from-real-estate-website---httpx-mongodb-and-dash-plotly)
+- [Analytic Report with SQL - Northwind Database](#analytic-report-with-sql---northwind-database)
+- [Automating Northwind Database Operations Using PL/pgSQL - Stored Procedures and Triggers](#automating-northwind-database-operations-using-plpgsql---stored-procedures-and-triggers)
 
 ---
 
-## Backend API for a digital book collection with JWT authentication using FastAPI
+## Web App for a Digital Book Collection using FastAPI for Backend and React for Frontend
+
+This project consists of a web application for a simplified version of a digital book collection.
+
+- 💻 **Backend**
+  - [FastAPI](https://fastapi.tiangolo.com/) for the Python backend API, with asynchronous routes.
+  - [SQLAlchemy](https://www.sqlalchemy.org/) for Python SQL database interactions (ORM).
+  - [Pydantic](https://docs.pydantic.dev/latest/), used by FastAPI, for data validation and settings management.
+  - PostgreSQL as the SQL database, using the [Asyncpg](https://magicstack.github.io/asyncpg/current/) driver.
+  - Tests with [Pytest](https://docs.pytest.org/en/stable/) and [Testcontainers](https://testcontainers-python.readthedocs.io/en/latest/).
+  - [Pre-commit](https://pre-commit.com/) with [Ruff](https://docs.astral.sh/ruff/) for linting.
+  - CI (Continuous Integration) based on GitHub Actions.
+- 🌐 **Frontend**
+
+  - [React](https://react.dev/) using TypeScript and Vite.
+  - [Chakra UI](https://www.chakra-ui.com/) for frontend components.
+  - [Axios](https://axios-http.com/docs/intro) to handle the backend API requests.
+  - [React Hook Form](https://react-hook-form.com/) to handle the submission of data in forms.
+
+- 🔒 Secure password hashing by default.
+- 🔑 JWT (JSON Web Token) authentication.
+- 🐋 Docker Compose for running all services together, including the PostgreSQL database.
+
+<img src = 'media/madr_full/madr-full-demo.gif' />
+
+### Tools used
+
+<div style="display: flex; gap: 40px;">
+    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/fastapi/fastapi-original-wordmark.svg" height=100>
+    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original-wordmark.svg" height=100/>
+    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg" height=100/>
+    <img src="media/pydantic.svg" height=100/>
+    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/sqlalchemy/sqlalchemy-original-wordmark.svg" height=100/> 
+    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-plain-wordmark.svg" height=100 />
+    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/githubactions/githubactions-original.svg" height=100/>
+    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/pytest/pytest-plain-wordmark.svg" height=100 /> 
+    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-plain-wordmark.svg"  height=100/>      
+    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/axios/axios-plain-wordmark.svg"  height=100/>
+          
+</div>
+
+### How it works
+
+It is an extension of [this repo](https://github.com/lealre/madr-fastapi).
+
+The app serves as a simple catalog of authors and books, where you can only register a book if an author is already registered. The dashboard area allows users to switch between author and book tabs, select records to delete in batch, add new records by opening a modal, and search for specific records. The search functionality enables searching by book or author name, based on the currently active tab.
+
+On the frontend, the JWT is stored in local storage. The dashboard area is a protected page requiring authentication, where users must log in to manage the collection records.
+
+See the full project repository [here](https://github.com/lealre/madr-fullstack).
+
+---
+
+## Backend API for a Digital Book Collection with JWT Authentication Using FastAPI
 
 This project consists of a backend API developed using [FastAPI](https://fastapi.tiangolo.com/) for a simplified version of a digital book collection.
 
@@ -76,7 +124,7 @@ See the full project repository [here](https://github.com/lealre/madr-fastapi).
 
 ---
 
-## A basic to-do app built with the Django framework.
+## A Basic To-Do App Built with the Django Framework
 
 A basic to-do app built with the Django framework. It features a simple interface to add, edit, and delete to-dos. In the trash area, you can either restore a to-do or permanently delete it.
 
@@ -146,7 +194,7 @@ See the full project repository [here](https://github.com/lealre/etl-airflow?tab
 
 ---
 
-## Rental Properties CRUD Catalog with SQLAlchemy, FastAPI, Streamlit and AWS Deploy
+## Rental Properties CRUD Catalog with SQLAlchemy, FastAPI, Streamlit, and AWS Deploy
 
 Web application for performing asynchronous CRUD operations on a PostgreSQL database using FastAPI, SQLAlchemy, Pydantic, Streamlit, and Docker.
 
@@ -181,7 +229,7 @@ See the full project repository [here](https://github.com/lealre/crud-rental-pro
 
 ---
 
-## Property Sales Dashboard Using Real Data Crawled from Real Estate Website - Httpx, MongoDB and Dash-plotly
+## Property Sales Dashboard Using Real Data Crawled from Real Estate Website - HTTPX, MongoDB, and Dash-Plotly
 
 This repository consists of an implementation of a dashboard containing data scraped from a real estate website: [Imovirtual](https://www.imovirtual.com/), a Portuguese real estate website offering homes, apartments, and other properties for sale and rent.
 
@@ -223,38 +271,7 @@ See the full project repository [here](https://github.com/lealre/crawler-to-dash
 
 ---
 
-## Excel Schema Validator with Pydantic and Streamlit
-
-Web application that validates a specific Excel schema and stores the data in a PostgreSQL database. The predefined schema is the contract schema, and the application validates it from Excel files using Pydantic, a Python validation library.
-
-<img src="media/excel_validator_project/demo.gif" />
-
-### Tools used
-
-<div style="display: flex; gap: 40px;">
-    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/streamlit/streamlit-original-wordmark.svg" height=100 />   
-    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/sqlalchemy/sqlalchemy-original-wordmark.svg" height=100/>     
-    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/pandas/pandas-original-wordmark.svg" height=100/>
-    <img src="media/pydantic.svg" height=100/>
-    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-plain-wordmark.svg" height=100 />
-    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/githubactions/githubactions-original.svg" height=100/>
-    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/pytest/pytest-plain-wordmark.svg" height=100 />      
-    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-plain-wordmark.svg"  height=100/>          
-</div>
-
-### How it works
-
-The user can upload Excel files in the app, and if the schema differs from the contract, the application will display a message indicating where the data schema differs from the contract schema, highlighting the specific rows and columns where the data does not conform to the agreed-upon schema.
-
-If the schema from the uploaded file passes validation, the app gives the option to store the data in the database
-
-<img src="media/excel_validator_project/app-diagram.png" />
-
-See the full project repository [here](https://github.com/lealre/excel-schema-validator).
-
----
-
-## Analytic Report with SQL - Northwind database
+## Analytic Report with SQL - Northwind Database
 
 This project aims to generate an analytical business report from a database that contains sales data from a company called Northwind Traders, which imports and exports specialty foods from around the world.
 
@@ -268,7 +285,7 @@ See the full project repository [here](https://github.com/lealre/northwind-analy
 
 ---
 
-## Automating Northwind database operations using PL/pgSQL - Stored Procedures and Triggers
+## Automating Northwind Database Operations Using PL/pgSQL - Stored Procedures and Triggers
 
 This project aims to use stored procedures and triggers in SQL to automate operations in a database.
 
